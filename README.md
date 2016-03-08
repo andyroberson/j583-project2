@@ -8,9 +8,10 @@ Clone this repository into your vagrant sites folder
 git clone https://github.com/asethwright/mongodb-app-example.git
 ```
 
-Install dependencies
+Install dependencies on your computer (NOT THE VAGRANT MACHINE)
 
 ```
+cd /path/to/sites/mongodb-app-example
 npm install
 ```
 
