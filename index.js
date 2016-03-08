@@ -8,7 +8,7 @@ var user = require('./controllers/user');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
-})); 
+}));
 
 app.set('view engine', 'ejs');
 
@@ -23,7 +23,8 @@ app.get('/users/:id', user.show); //edit form
 app.get('/users/delete/:id', user.remove); //delete action
 
 db.connect('mongodb://localhost:27017/test', function(err) {
+    console.log("MongoDB connected...");
     app.listen(8080, function() {
-        console.log("Server connected...");
+        console.log("Express started...");
     });
 });
