@@ -28,5 +28,5 @@ cd /vagrant/mongodb-app-example
 node index.js
 ```
 
-Navigate to http://localhost/users/
+Navigate to http://localhost:8080/users/
 
