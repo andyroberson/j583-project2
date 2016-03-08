@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github Users</title>
+    </head>
+    <body>
+        <h3>Spring 2016 Students</h3>
+        <% if (users.length) { %>
+        <ul>
+            <% for (var i in users) { %>
+            <li><a href="/users/<%= users[i].username %>"><%= users[i].name %></a></li>
+            <% } %>
+        </ul>
+        <% } else { %>
+        <p>Sorry, there are no students yet.</p>
+        <% } %>
+
+        <p><a href="/user/new">New User</a></p>
+    </body>
+</html>
