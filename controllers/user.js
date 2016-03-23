@@ -1,5 +1,6 @@
 var db = require('../config/db');
 
+//after .list it's using mongo stuff
 exports.list = function(req, res) {
     var collection = db.get().collection('users');
 
@@ -20,6 +21,13 @@ exports.update = function(req, res) {
     var collection = db.get().collection('users');
 
     //note about xss and sanitization
+    //updateOne is built in mongo thing
+    //req.params is built in express functions
+    //id is /users/:id //colon uses it as the end of the path?
+
+    //last name as path? no matter what clicked on id will be right person
+
+    //$set is saying whatever they enter use that as the new username or author etc
     collection.updateOne(
         {username: req.params.id},
         {
