@@ -4,7 +4,9 @@ body {
 
 /*name title*/
 h1 {
-
+  border-bottom: 1px solid #000;
+  font-size: 23px;
+  line-height: 29px;
 }
 
 /*.row {
@@ -51,4 +53,21 @@ h1 {
   padding: 0;
   margin: 0;
   font-style: italic;
+}
+
+.solo-contact {
+  background: #eee;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+.form-group {
+  padding: 15px;
+}
+
+label {
+  display: inline;
 }
