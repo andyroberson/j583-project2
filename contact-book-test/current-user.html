@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+        <link href='font-awesome-4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+        <!--scripts-->
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+
+        <!--stylesheets-->
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="single-user.css" />
+
+    </head>
+    <body>
+      <div class="col-md-12 admin">ADMIN BAR
+        <div class="float-right"><a href="/" class="admin-item">new contact <i class="fa fa-plus-square-o"></i></a> <a href="/" class="admin-item">help <i class="fa fa-question-circle"></i></a></div>
+      </div>
+      <div class="container-fluid text-center">
+
+        <!--title-->
+        <div class="row title-container">
+          <div class="logo"></div>
+          <div class="sub-title">address book</div>
+        </div>
+
+        <!--navbar-->
+        <!--https://getbootstrap.com/components/#navbar-->
+        <div class="row nav-group">
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+          <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 address-container">
+            <nav class="navbar navbar-default" id="navbar-secondary">
+              <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">All Contacts</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Vendors</a></li>
+                  <li><a href="#">Customers</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+      </div>
+
+        <div class="row">
+        <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+
+          <!--solo contact-->
+          <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 solo-contact">
+            <div class="solo-contact-img"></div>
+            <h1>Harry Potter</h1>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="job-title">Job Title</label></div>
+              <div class="col-xs-10"><div class="form-control">job here</div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="address">Address</label></div>
+              <div class="col-xs-10"><div class="form-control">address</div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="phone">Phone</label></div>
+              <div class="col-xs-10"><div class="form-control">phone</div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="notes">Notes</label></div>
+              <div class="col-xs-10"><div class="form-control notes">Notes</div></div>
+            </div>
+            <button type="button" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+
+
+
+          </div>
+
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+        </div>
+
+      </div>
+
+
+    </body>
+    </html>

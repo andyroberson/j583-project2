@@ -22,6 +22,7 @@ app.set('view engine', 'ejs');
 //ap.get('/', filename)
 
 app.get('/users', user.list); //list page
+app.get('/user/help', user.help);
 
 app.get('/user/new', user.form); //new action
 app.post('/users', user.create); //new action

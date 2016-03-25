@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Github Users</title>
+        <title>Address Book</title>
+        <meta charset="utf-8">
+          <link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+          <link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+          <link href='/font-awesome-4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+          <!--scripts-->
+          <script src="/js/jquery.min.js"></script>
+          <script src="/js/bootstrap.min.js"></script>
+
+          <!--stylesheets-->
+          <link rel="stylesheet" href="/css/bootstrap.css" />
+          <link rel="stylesheet" href="/css/styles.css" />
+          <link rel="stylesheet" href="/css/single-user.css" />
     </head>
     <body>
-        <h3><%= user.name %></h3>
-        <p><a href="/users/delete/<%= user.username %>">Delete</a></p>
-        <p><a href="/users/edit/<%= user.username %>">Edit</a></p>
-        <form action="/users/<%= user.username %>" method="POST">
+          <div class="container-fluid text-center">
 
-            <p>
-            <label>Full Name</label>
-            <input type="text" id="name" name="name" value="<%= user.name %>" />
-            </p>
+            <!--title-->
+            <div class="row title-container">
+              <a href="/users"><div class="logo"></div></a>
+              <div class="sub-title">address book</div>
+            </div>
 
-            <p>
-            <label>Username</label>
-            <input type="text" id="username" name="username" value="<%= user.username %>" />
-            </p>
+            <!--navbar-->
+            <!--https://getbootstrap.com/components/#navbar-->
+            <div class="row nav-group">
+              <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+              <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 nav-container">
+                <nav class="navbar navbar-default" id="primary-navbar">
+                  <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/users"><i class="fa fa-home"></i></a>
+                  </div>
 
-            <p>
-            <label>Github Link</label>
-            <input type="text" id="link" name="link" value="<%= user.link %>" />
-            </p>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/user/new">New Contact <i class="fa fa-plus-square-o"></i></a></li>
+                      <li><a href="/user/help">Help <i class="fa fa-question-circle"></i></a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+              </div>
+            <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+            </div>
 
-            <p>
-            <label>Address</label>
-            <input type="text" id="address" name="address" value="<%= user.address %>" />
-            </p>
+          <div class="row">
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
 
-            <p>
-            <label>State</label>
-            <input type="text" id="state" name="state" value="<%= user.state %>" />
-            </p>
+          <!--solo contact-->
+          <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 solo-contact">
 
-            <p>
-            <label>Zip</label>
-            <input type="text" id="zip" name="zip" value="<%= user.zip %>" />
-            </p>
+            <h1><%= user.name %></h1>
 
-            <p>
-            <label>Phone</label>
-            <input type="text" id="phone" name="phone" value="<%= user.phone %>" />
-            </p>
+            <% if (user.link == null) {
+              user.link = "https://storify.com/public/img/default.avatar.png"; }
+            %>
 
-            <p><label>Notes</label>
-            <input type="text" id="notes" name="notes" value="<%= user.notes %>" />
-            </p>
+              <img src="<%= user.link %>" class="solo-contact-img">
 
-            <button>Update</button>
+
+
+
+        <!-- <p><a href="/users/delete/<%= user.username %>">Delete</a></p>
+        <p><a href="/users/edit/<%= user.username %>"></a></p> -->
+          <form action="/users/<%= user.username %>" method="POST">
+
+            <div class="form-group">
+              <div class="col-xs-2"><label for="job-title">Job Title</label></div>
+              <div class="col-xs-10"><div class="form-control" id="job" name="job"><%= user.job %></div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="username">Username</label></div>
+              <div class="col-xs-10"><div class="form-control" id="username" name="username"><%= user.username %></div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="address">Address</label></div>
+              <div class="col-xs-10"><div class="form-control" id="address" name="address"><%= user.address %>, <%= user.state %>, <%= user.zip %></div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="phone">Phone</label></div>
+              <div class="col-xs-10"><div class="form-control" id="phone" name="phone"><%= user.phone %></div></div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-2"><label for="notes">Notes</label></div>
+              <div class="col-xs-10"><div class="form-control notes" id="notes" name="notes"><%= user.notes %></div></div>
+            </div>
+
+            <a href="/users/edit/<%= user.username %>"><div class="btn btn-primary">Edit</div></a>
+            <a href="/users/delete/<%= user.username %>"><div class="btn btn-danger">Delete</div></a>
 
         </form>
+      </div>
+
+      <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+    </div>
+
+  </div>
+
+  <div class="col-md-12 footer">MongoDB, Node, EJS, Express and vagrant project created for Spring 2016 Advanced Coding class for MJ-School at the University of North Carolina at Chapel Hill.
+    <br><br><a href="https://dribbble.com/shots/475320-COCO-CAFE-logo-Coconut-concept">Logo concept</a> by Jan Zabransky
+  </div>
     </body>
 </html>

@@ -2,6 +2,9 @@
 <html>
     <head>
       <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+        <link href='font-awesome-4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
         <!--scripts-->
         <script src="jquery.min.js"></script>
@@ -13,79 +16,94 @@
 
     </head>
     <body>
+      <div class="col-md-12 admin">ADMIN BAR
+        <div class="float-right"><a href="/" class="admin-item">new  contact<i class="fa fa-plus-square-o"></i></a> <a href="/" class="admin-item">help <i class="fa fa-question-circle"></i></a></div>
+      </div>
       <div class="container-fluid text-center">
 
         <!--title-->
         <div class="row title-container">
-          <div class="col-md-12">Address Book</div>
+          <div class="logo"></div>
+          <div class="sub-title">address book</div>
         </div>
 
         <!--navbar-->
         <!--https://getbootstrap.com/components/#navbar-->
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Brand</a>
-            </div>
+        <div class="row nav-group">
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+          <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 address-container">
+            <nav class="navbar navbar-default" id="primary-navbar">
+              <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
+              </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">All Contacts</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Vendors</a></li>
+                  <li><a href="#">Customers</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
+      </div>
 
 
         <!--address book section-->
         <div class="row contacts-container">
-          <div class="col-md-1 hidden-xs"></div>
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
 
           <!--address content-->
-          <div class="col-md-10 col-xs-12">
-
-                <div class="col-md-6 col-xs-12 address-group">
-                  <div class="contact-img"></div>
-                  <div class="name-header">Harry Potter</div>
-                  <div class="job-title">Boy Who Lived</div>
+          <div class="col-xl-4 col-md-6 col-sm-8 col-xs-12 address-container">
+            <!-- <div class="address-container"> -->
+                <div class="col-md-12 col-xs-12">
+                  <div class="address-group" id="active-address">
+                      <img src="https://31.media.tumblr.com/avatar_0373c175c446_128.png" class="contact-img" />
+                      <div class="name-header">Harry Potter</div>
+                      <div class="job-title">Boy Who Lived</div>
+                  </div>
                 </div>
 
-                <div class="col-md-6 col-xs-12 address-group">
-                  <div class="contact-img"></div>
-                  <div class="name-header">Ron Weasely</div>
-                  <div class="job-title">Best Friend</div>
+                <div class="col-md-12 col-xs-12">
+                    <div class="address-group">
+                      <img src="http://33.media.tumblr.com/avatar_3cc6e687dff2_128.png" class="contact-img" />
+                      <div class="name-header">Ron Weasely</div>
+                      <div class="job-title">Best Friend</div>
+                    </div>
                 </div>
 
-                <div class="col-md-6 col-xs-12 address-group">
-                  <div class="contact-img"></div>
-                  <div class="name-header">Hermione Granger</div>
-                  <div class="job-title">The Smart One</div>
+                <div class="col-md-12 col-xs-12">
+                      <div class="address-group">
+                        <img src="http://pm1.narvii.com/5797/c92224d63ce4e909cfa5ecd3b70bcb3c1f26f515_128.jpg" class="contact-img" />
+                        <div class="name-header">Hermione Granger</div>
+                        <div class="job-title">The Smart One</div>
+                      </div>
                 </div>
 
-                <div class="col-md-6 col-xs-12 address-group">
-                  <div class="contact-img"></div>
-                  <div class="name-header">Voldemort</div>
-                  <div class="job-title">He Who Must Not Be Named</div>
+                <div class="col-md-12 col-xs-12">
+                  <div class="address-group">
+                      <img src="https://31.media.tumblr.com/avatar_83ccf4a8d03f_128.png" class="contact-img" />
+                      <div class="name-header">Voldemort</div>
+                      <div class="job-title">He Who Must Not Be Named</div>
+                    </div>
                 </div>
+              </div>
+          <!-- </div> -->
 
-          </div>
 
-
-          <div class="col-md-1 hidden-xs"></div>
+          <div class="col-xl-4 col-md-3 col-sm-2 hidden-xs"></div>
         </div>
 
       </div>

@@ -1,0 +1,250 @@
+/*don't forget to add margin stuff as seen in typography. also fonts!*/
+body {
+  background: #fff;
+}
+
+a {
+  color: #45AAB8;
+}
+
+/*name title*/
+h1 {
+  border-bottom: 1px solid #000;
+  font-size: 23px;
+  line-height: 29px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.name-header {
+  font-size: 20px;
+  margin-top: -15px;
+  padding: 0;
+  color: #C4BFBA;
+  /*border-bottom: 1px solid #000;
+  display: inline;*/
+}
+
+.job-title {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  color: #4B3C2F;
+}
+
+
+.logo {
+  background: url("/coco-cafe-logo.jpg");
+  width: 400px;
+  height: 250px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.sub-title {
+  font-family: 'League Script', cursive;
+  font-size: 40px;
+  margin-top: -40px;
+  margin-left: -2px;
+}
+
+.title-container {
+  /*margin: 24px;*/
+  margin-top: -70px;
+}
+
+.home-active {
+  color: #e7e7e7 !important;
+  border-bottom: 1px solid #e7e7e7;
+}
+/*menu*/
+
+/*with addresses etc*/
+/*.contacts-container {
+  background: #fff;
+}*/
+
+/*address book*/
+/*#active-address {
+  border-bottom: 1px solid #57C5C7;
+}*/
+
+.address-group {
+  border-bottom: 1px solid #6A5E54;
+  margin-top: 10px;
+  padding: 20px;
+  min-width: 350px;
+  height: auto;
+  display: inline-block;
+}
+
+/*TODO - media queries for address-group*/
+
+.contact-img {
+  background: #eee;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid #4B3C2F;
+  float: left;
+  margin-left: 15px;
+  margin-top: -15px;
+  z-index: 1;
+}
+
+.solo-contact-img {
+  background: #eee;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+.form-group {
+  padding: 15px;
+}
+
+.address-container {
+  background: #fff;
+  border: 5px solid #4B3C2F;
+  border-top: 0;
+  min-width: 420px;
+  height: auto;
+}
+
+.nav-container {
+  background: #4B3C2F;
+  /*border: 5px solid #4B3C2F;*/
+  border-bottom: 0;
+}
+
+label {
+  display: inline;
+  text-align: left;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.nav-group {
+  color: #00B5B9;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #eee;
+}
+
+.navbar-default .navbar-brand {
+    color: #877E75;
+    font-size: 25px;
+    margin-top: -1px;
+}
+
+.narbar-brand a, .navbar a, .navbar-default .navbar-nav>li>a {
+  color: #877E75;
+}
+
+.navbar a:hover, .navbar-default .navbar-nav>li>a:hover{
+  color: #C4BFBA;
+}
+
+.fa .fa-home a:hover {
+  color: #7BAFD4 !important;
+}
+
+.admin, .footer, .my-footer {
+  background: #C4BFBA;
+  color: #4B3C2F;
+  font-weight: 800;
+}
+
+.admin a {
+  font-weight: 400;
+}
+
+.admin-item {
+  margin-left: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+  font-weight: 400;
+}
+
+.footer a {
+  color: #877E75;
+}
+
+.footer a:hover {
+  color: #e7e7e7;
+}
+
+.float-right {
+  float: right;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.solo-contact {
+  display: inline-block;
+  border: 5px solid #4B3C2F;
+  border-top: 0;
+  margin-bottom: 15px;
+}
+
+textarea.form-control {
+  margin-bottom: 15px;
+}
+
+#secondary-navbar {
+  border-bottom: 0px;
+}
+
+/*#primary-navbar {
+  border-bottom: 1px solid #877E75;
+}*/
+
+.btn {
+  margin-bottom: 15px;
+}
+
+/*.btn-primary {
+  background: #45AAB8;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #45AAB8;
+  opacity: .7;
+}*/
+
+.btn-danger {
+  background: #FC9D9A;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.btn-danger:hover {
+  background: #FC9D9A;
+  opacity: .7;
+}
+
+.navbar-default .navbar-nav>.active>a, {
+  color: #C4BFBA;
+}
+
+.help-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

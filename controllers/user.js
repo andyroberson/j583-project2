@@ -35,6 +35,7 @@ exports.update = function(req, res) {
             $set: {
                 username: req.body.username,
                 name: req.body.name,
+                job: req.body.job,
                 link: req.body.link,
                 address: req.body.address,
                 state: req.body.state,
@@ -61,14 +62,18 @@ exports.edit = function(req, res) {
     });
 };
 
-//create ?
+exports.help = function(req, res) {
+        res.render('user/help');
+};
+
+//create
 exports.create = function(req, res) {
     var collection = db.get().collection('users');
-
     //note about xss and sanitization
     collection.insert({
         username: req.body.username,
         name: req.body.name,
+        job: req.body.job,
         link: req.body.link,
         address: req.body.address,
         state: req.body.state,
