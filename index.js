@@ -26,11 +26,19 @@ app.get('/users', user.list); //list page
 app.get('/user/new', user.form); //new action
 app.post('/users', user.create); //new action
 
+//testing position of show here:
+app.get('/users/:id', user.show); //show user
+
 //what was happened thurs let's you update and stuff?
-app.post('/users/:id', user.update); //edit action
-app.get('/users/:id', user.show); //edit form
+app.post('/users/edit/:id', user.update);
+app.get('/users/edit/:id', user.edit);//edit action
+// app.get('/users/:id', user.show); //show user
+
+//app.post('/users/edit/:id', user.update); //update user
+//app.get('/users/edit/:id', user.edit); //edit current user - post?
 
 app.get('/users/delete/:id', user.remove); //delete action
+
 
 db.connect('mongodb://localhost:27017/test', function(err) {
     console.log("MongoDB connected...");

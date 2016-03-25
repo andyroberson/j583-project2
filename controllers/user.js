@@ -9,6 +9,7 @@ exports.list = function(req, res) {
     });
 };
 
+//showing users URL
 exports.show = function(req, res) {
     var collection = db.get().collection('users');
 
@@ -34,18 +35,33 @@ exports.update = function(req, res) {
             $set: {
                 username: req.body.username,
                 name: req.body.name,
-                link: req.body.link
+                link: req.body.link,
+                address: req.body.address,
+                state: req.body.state,
+                zip: req.body.zip,
+                phone: req.body.phone,
+                notes: req.body.notes
             }
         }
     );
 
-    res.redirect('/users');
+    res.redirect('/users/' + req.body.username);
 };
 
 exports.form = function(req, res) {
     res.render('user/form');
 }
 
+//edit page TODO ------------ WROTE STUFF HERE!!
+exports.edit = function(req, res) {
+    var collection = db.get().collection('users');
+
+    collection.find({"username": req.params.id}).limit(1).toArray(function(err, results) {
+        res.render('user/edit', {user: results[0]});
+    });
+};
+
+//create ?
 exports.create = function(req, res) {
     var collection = db.get().collection('users');
 
@@ -53,12 +69,18 @@ exports.create = function(req, res) {
     collection.insert({
         username: req.body.username,
         name: req.body.name,
-        link: req.body.link
+        link: req.body.link,
+        address: req.body.address,
+        state: req.body.state,
+        zip: req.body.zip,
+        phone: req.body.phone,
+        notes: req.body.notes
     });
 
     res.redirect('/users');
 };
 
+//removing; get collection, remove appropriate item, return to /users
 exports.remove = function(req, res) {
     var collection = db.get().collection('users');
 

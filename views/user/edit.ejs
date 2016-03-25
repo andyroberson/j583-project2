@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Github Users</title>
+        <title>Testing 123</title>
     </head>
     <body>
-        <h3><%= user.name %></h3>
+        <h3>Edit</h3>
         <p><a href="/users/delete/<%= user.username %>">Delete</a></p>
-        <p><a href="/users/edit/<%= user.username %>">Edit</a></p>
-        <form action="/users/<%= user.username %>" method="POST">
+        <form action="/users/edit/<%= user.username %>/" method="POST">
 
             <p>
             <label>Full Name</label>
@@ -48,7 +47,7 @@
             <input type="text" id="notes" name="notes" value="<%= user.notes %>" />
             </p>
 
-            <button>Update</button>
+           <button>Update</button>
 
         </form>
     </body>
