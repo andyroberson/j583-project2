@@ -78,6 +78,15 @@ h1 {
   display: inline-block;
 }
 
+@media (max-width: 420px) {
+  .address-group {
+    width: 300px;
+  }
+
+  .address-container {
+    width: 320px;
+  }
+}
 /*TODO - media queries for address-group*/
 
 .contact-img {
